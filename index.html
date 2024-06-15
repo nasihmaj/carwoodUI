@@ -9,15 +9,34 @@
         .hero {
             background: url('https://hips.hearstapps.com/hmg-prod/images/2021-genesis-g80-rwd-2p5tprestige-149-1603678100.jpg?crop=0.617xw:0.461xh;0.121xw,0.524xh&resize=1200:*') no-repeat center center;
             background-size: cover;
-            height: 80vh;
+            height: 60vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
+            text-align: center;
         }
-
         .content-section {
-            padding: 50px 0;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                height: 40vh;
+                padding: 10px;
+                background-size: cover;
+                background-position: center;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 576px) {
+            .content-section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -34,7 +53,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -45,20 +64,20 @@
     </nav>
 
     <section class="hero">
-        <div class="text-center">
+        <div>
             <h1>Welcome to Carwood</h1>
             <p>Your trusted platform for buying and selling cars</p>
-            <button class="btn btn-primary">Learn More</button>
+            <button class="btn btn-primary" onclick="window.location.href='gallery.html'">Learn More</button>
         </div>
     </section>
 
     <div class="container content-section">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-12">
                 <h2>About Us</h2>
                 <p>Carwood is your trusted car selling platform where you can confidently buy and sell vehicles. We provide a reliable and secure marketplace for all your automotive needs.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
                 <h3>Contact Info</h3>
                 <p>Email: info@carwood.com</p>
                 <p>Phone: 123-456-7890</p>
@@ -68,7 +87,7 @@
 
     <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 Carwood:
+            © 2024 Carwood:
             <a class="text-dark" href="https://carwood.com/">carwood.com</a>
         </div>
     </footer>
